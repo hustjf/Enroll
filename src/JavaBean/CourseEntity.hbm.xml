@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="JavaBean.CourseEntity" table="course" schema="" catalog="info">
+        <id name="id" column="id">
+            <generator class="increment"/>
+        </id>
+        <property name="coursenumber">
+            <column name="coursenumber" sql-type="int" length="10" not-null="true"/>
+        </property>
+        <property name="coursename">
+            <column name="coursename" sql-type="varchar" length="45" not-null="true"/>
+        </property>
+        <property name="stuid">
+            <column name="stuid" sql-type="int" length="10" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
